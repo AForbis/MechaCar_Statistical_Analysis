@@ -11,9 +11,9 @@
 
 ## Summary Statistics on Suspension Coils
 
-![](Images/LotSummary_Del%232.png)
-
 ![](Images/totalSummary_Del%232.png)
+
+![](Images/LotSummary_Del%232.png)
 
   - asdf
 
