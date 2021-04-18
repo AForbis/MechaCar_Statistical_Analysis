@@ -8,10 +8,9 @@ library(dplyr)
 
 mecha_car_mpg_data <- read.csv('MechaCar_mpg.csv') #import dataset
 
-lm(vehicle_length ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + mpg,data=mecha_car_mpg_data) #generate multiple linear regression model
+lm(mpg ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + vehicle_length,data=mecha_car_mpg_data) #generate multiple linear regression model
 
-summary(lm(vehicle_length ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + mpg,data=mecha_car_mpg_data)) #generate summary statistics
-
+summary(lm(mpg ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + vehicle_length,data=mecha_car_mpg_data)) #generate summary statistics
 
 
 #Deliverable #2 - Create visualizations for the Trip Analysis
