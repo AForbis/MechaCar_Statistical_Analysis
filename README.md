@@ -9,11 +9,13 @@
   - This linear model predicts mpg of MechaCar prototypes fairly effectively. In this case, r-squared = .71, indicating that roughly 71% of mpg predictions will be correct when using this model. 
 
 
-## 2
+## Summary Statistics on Suspension Coils
 
 ![](Images/LotSummary_Del%232.png)
 
 ![](Images/totalSummary_Del%232.png)
+
+  - asdf
 
 ## 3
 
