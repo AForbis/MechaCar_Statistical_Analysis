@@ -2,7 +2,9 @@
 
 ## Linear Regression to Predict MPG
 
-![Images/LRMcoefficients_Del#1](Images/LRMcoefficients_Del%231.png)
+![](Images/LRMcoefficients_Del%231.png)
+
+  - 
 
 ![](Images/SummaryStats_Del%231.png)
 
