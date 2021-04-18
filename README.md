@@ -21,9 +21,9 @@
 
 ![](Images/SampleVSpop_Del%233.png)
 
-![](Images/LotsVSpop_Del%233.png)
-
   - The mean PSI across all manufacturing lots (1,498.78) was not statistically different at the .05 significance level from the population mean of 1,500 pounds per square inch.
+
+![](Images/LotsVSpop_Del%233.png)
 
   - Only the mean PSI for manufacturing Lot3 (1,496.14) was statistically different from the population mean of 1,500 pounds per square inch at the .05 significance level. Lot1 and Lot2 were not statistically significant from the population mean.
 
