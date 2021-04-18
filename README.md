@@ -17,10 +17,12 @@
 
   - The current manufacturing data meets the suspension coil design specification (variance of coils may not exceed 100lbs/square inch) for all manufacturing lots in total but NOT each lot individually. The variance across all lots (62), Lot1 (1), and Lot2 (7) meet the design specification, while the variance for Lot3 (170) did not meet the design specification.
 
-## 3
+## T-Tests on Suspension Coils
 
 ![](Images/SampleVSpop_Del%233.png)
 
 ![](Images/LotsVSpop_Del%233.png)
+
+  - 
 
 ## 4
