@@ -4,9 +4,9 @@
 
 ![](Images/LRMcoefficients_Del%231.png)
 
-  - 
-
 ![](Images/SummaryStats_Del%231.png)
+
+  - 
 
 ## 2
 
