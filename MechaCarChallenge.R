@@ -3,6 +3,8 @@
 # Deliverable #1 - Linear Regression to Predict MPG
 
 library(tidyverse)
+library(dplyr)
+
 
 mecha_car_mpg_data <- read.csv('MechaCar_mpg.csv') #import dataset
 
@@ -24,6 +26,16 @@ lot_summary <- suspension_coil_table %>%  group_by(Manufacturing_Lot) %>% summar
 
 # Deliverable #3 - T-tests on Suspension Coils
 
-t.test(log10(suspension_coil_table$Manufacturing_Lot),mu=mean((1500))) #compare sample versus population mean
+t.test(suspension_coil_table$PSI, mu=1500) #compare sample versus population mean
 
- # t.test(log10(sample_table$Miles_Driven),mu=mean(log10(population_table$Miles_Driven))) #compare sample versus population means
+coils_Lot1 <- subset(suspension_coil_table, Manufacturing_Lot == "Lot1") #assign Lot1 to table
+coils_Lot2 <- subset(suspension_coil_table, Manufacturing_Lot == "Lot2") #assign Lot2 to table
+coils_Lot3 <- subset(suspension_coil_table, Manufacturing_Lot == "Lot3") #assign Lot3 to table
+
+t.test(coils_Lot1$PSI, mu=1500) # Lot1 vs. population
+t.test(coils_Lot2$PSI, mu=1500) # Lot2 vs. population
+t.test(coils_Lot3$PSI, mu=1500) # Lot3 vs. population
+
+
+
+       
