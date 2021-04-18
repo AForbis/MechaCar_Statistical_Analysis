@@ -29,4 +29,4 @@
 
 ## Study Design: MechaCar vs Competition
 
-
+  - In this study I want to compare the performance of the MechaCar vehicles against the performance of vehicles from other manufacturers. Specifically, I want to compare the cars across cost and mpg. Because we are comparing the means of more than two populations (MechaCar plus all the car manufacturers) across one independent variable we need to use a one-way ANOVA test, once for cost and once for mpg. The null hypothesis for test one would be that the mean cost of vehicles across all populations (e.g., MechaCar, Toyota, Ford) are equal, while the alternative hypothesis would be that there is a difference in at least one of the mean cost of vehicles across all populations. A similar test would be done for the mean mpg, where the null hypothesis would be that the mean mpg of vehicles across all populations are equal, and the alternative hypothesis would be that there is a difference in at least one of the mean mpg of vehicles across all populations. The data necessary for the tests would be the mean cost and mpg of all cars at each manufacturer (e.g., Toyota, Ford).
