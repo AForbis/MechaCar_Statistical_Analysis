@@ -190,7 +190,7 @@ iris %>%
   geom_density(alpha = 0.5) + # alpha makes colors more transparent
   theme(legend.position = "bottom")
 
-# Box plot ##################################################################
+# Box plots ##################################################################
 
 # All vars at once
 iris %>% boxplot()
@@ -240,6 +240,100 @@ iris %>%
   xlab("") +
   theme(legend.position = "none")
 
+# Scatter Plots ##################################################################
+
+# Q-plots
+
+# Basic scatter plot
+qplot(Petal.Width,Petal.Length, data = iris)
+
+
+# Scatter plot Colored by species
+qplot(Petal.Width,
+      Petal.Length,
+      color = Species,
+      data = iris)
+
+# GGPlot
+
+# Basic
+ggplot(iris,
+       aes(Petal.Width, Petal.Length)) +
+  geom_point()
+
+# Jitter
+ggplot(iris,
+       aes(Petal.Width, Petal.Length)) +
+  geom_jitter()
+
+# Scatter, jitter, var size, color by species
+ggplot(iris,
+       aes(Petal.Width, Petal.Length,
+           size = Sepal.Length,
+           color = Species)) +
+  geom_jitter(alpha = .5)
+
+# Scatter, color by species, fit line
+ggplot(iris,
+       aes(Petal.Width, Petal.Length,
+           color = Species)) +
+  geom_point(size = 3) +
+  geom_smooth(method = lm)
+
+# Scatter, color by species, fit line, density
+ggplot(iris,
+       aes(Petal.Width, Petal.Length,
+           color = Species)) +
+  geom_point(size = 3) +
+  geom_smooth(method = lm) +
+  geom_density2d(alpha = .5) +
+  theme(legend.position = "bottom")
+
+# Clear data ######################################################################
+rm(list = ls()) # removes all objects from environment
+
+
+# Multiple Graphs ##################################################################
+
+# GGPlot hist spread across 3 graphs in one
+iris %>%
+  ggplot(aes(x = Petal.Length,
+    fill = Species)) +
+  geom_histogram() +
+  facet_grid(Species ~ .) + # facet_grid
+  theme(legend.position = "none") # Turn off legend
+
+
+# GGPlot density spread across multiple graphs
+iris %>%
+  ggplot(aes(x = Petal.Length,
+    fill = Species)) +
+  geom_density(alpha = 0.5) + # alpha makes colors more transparent
+  facet_grid(Species ~ .) +
+  theme(legend.position = "bottom")
+
+# Scatter across multiple graphs
+ggplot(iris,
+  aes(Petal.Width, Petal.Length,
+    color = Species)) +
+  geom_point(size = 3) +
+  geom_smooth(method = lm) +
+  geom_density2d(alpha = .5) +
+  facet_grid(Species ~ .) +
+  theme(legend.position = "none")
+
+
+# Cluster Charts ##################################################################
+
+df_mtc <- mtcars
+glimpse(mtcars)
+
+df_mtc <- mtcars %>%
+  rownames_to_column() %>% # Tibbles don't have row names
+  as_tibble() %>%
+  select(car = rowname, mpg:hp, wt, qsec, gear, carb) %>%
+  mutate_at(vars(-car), scale) %>% # Standardize values across variables
+  print()
 
 
 
