@@ -335,7 +335,22 @@ df_mtc <- mtcars %>%
   mutate_at(vars(-car), scale) %>% # Standardize values across variables
   print()
 
+# Calculate clusters
+hc <- df_mtc %>% # get data
+  dist %>% # compute distance/dissimilarity matrix
+  hclust() # compute hierarchical clusters
 
+ # Plot dendrogram
+ hc %>% plot(labels = df_mtc$car, cex = 0.8, hang = -1)
+ 
+ # Draw boxes around clusters
+
+ hc %>% rect.hclust(k=5, border = 2:6)
+
+ 
+# Wrangling Data ####
+ 
+ 
 
 # EL Short Data ##################################################################
 
